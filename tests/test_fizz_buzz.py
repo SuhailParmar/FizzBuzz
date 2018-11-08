@@ -22,3 +22,13 @@ class TestFizzBuzz:
         for value in not_multiples_of_three:
             assert self.fb.is_fizz(value) is False
 
+    def test_is_buzz_returns_true_for_muliples_of_5(self):
+
+        multiples_of_five = [5, 10, 15, 35, 50]
+        for value in multiples_of_five:
+            assert self.fb.is_buzz(value) is True
+
+    def test_is_buzz_returns_false_for_not_muliples_of_5(self):
+        not_multiples_of_five = [1, 3, 4, 9, 144]
+        for value in not_multiples_of_five:
+            assert self.fb.is_buzz(value) is False
