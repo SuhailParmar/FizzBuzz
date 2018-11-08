@@ -1,6 +1,21 @@
 # FizzBuzz
 My implementation of FizzBuzz in python3. Developed using TDD [check the commits ;)]
 
+## Run Application
+
+```bash
+python3 main.py
+```
+When prompted type the max_range.
+
+```python
+Input...
+> 10
+1
+2
+Fizz...
+```
+
 ## Running Tests
 
 Install pytest
