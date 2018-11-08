@@ -36,3 +36,10 @@ class TestFizzBuzz:
         multiples_of_three_five = [15, 30, 45, 60, 90]
         for value in multiples_of_three_five:
             assert self.fb.is_fizz_buzz(value) is True
+
+    def test_run_fizz_buzz(self, capsys):
+        output = self.fb.run_fizz_buzz(15)
+        out = capsys.readouterr()[0]  # Returns Tuple of out, error
+        assert out.count('Fizz') == 5  # 4 + 1(FIZZBuzz)
+        assert out.count('Buzz') == 3  # 2 + 1 (FizzBUZZ)
+        assert out.count('FizzBuzz') == 1
