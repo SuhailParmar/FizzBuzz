@@ -1,16 +1,18 @@
 class FizzBuzz:
 
-    def is_fizz(self, integer):
+    @staticmethod
+    def is_fizz(integer):
         return (integer % 3 == 0)
 
-    def is_buzz(self, integer):
+    @staticmethod
+    def is_buzz(integer):
         return (integer % 5 == 0)
 
     def is_fizz_buzz(self, integer):
         return (self.is_fizz(integer) and self.is_buzz(integer))
 
-    def run_fizz_buzz(self, max_range):
-        for integer in range(1, max_range+1):
+    def run_fizz_buzz(self, max_range, min_range=1):
+        for integer in range(min_range, max_range+1):
             if self.is_fizz_buzz(integer):
                 print('FizzBuzz')
             elif self.is_buzz(integer):
