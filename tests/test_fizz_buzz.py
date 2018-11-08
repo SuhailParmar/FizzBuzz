@@ -1,4 +1,4 @@
-from lib.fizz_buzz import fizz_buzz
+from lib.fizz_buzz import FizzBuzz
 
 
 class TestFizzBuzz:
@@ -9,7 +9,7 @@ class TestFizzBuzz:
     - For the multiples of five print “Buzz”
     - For numbers which are multiples of both three and five print “FizzBuzz”."
     '''
-    fb = fizz_buzz()
+    fb = FizzBuzz()
 
     def test_is_fizz_returns_true_for_muliples_of_3(self):
 
@@ -21,3 +21,4 @@ class TestFizzBuzz:
         not_multiples_of_three = [1, 2, 7, 11, 29]
         for value in not_multiples_of_three:
             assert self.fb.is_fizz(value) is False
+
